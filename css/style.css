@@ -29,6 +29,11 @@ body {
 	
 }
 
+.nav .mobile {
+	display: none;
+	color: black;
+}
+
 .logo {
 	letter-spacing: 1px;
 	float: left;
@@ -119,10 +124,37 @@ body {
 }
 .header button:hover {
 	transition: all 0.3s;
-	background: white;
+	background: none;
 	color: black;
 	border-right: 5px solid black;
 	border-left: 5px solid black;
+}
+
+/* When screen is less than 708px enter mobile device viewing mode*/
+@media screen and (max-width: 708px) {
+	.nav ul li a {display: none;}
+	.nav .line {display: none;}
+	
+	.nav a.mobile {
+		float: right;
+		display: block;
+	}
+}
+
+/* Responsive that interacts with JavaScript*/
+@media screen and (max-width: 708px) {
+	.nav.responsive {position: relative;}
+	.nav.responsive a.mobile {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	
+	.nav.responsive ul li a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
 }
 
 

@@ -13,13 +13,14 @@
 
 <body>
   	<div class="wrapper">
-  		<div class="nav">
+  		<div class="nav" id="topNav">
   			<div class="logo">RAM</div>
   			<div class="menu">
   				<ul>
   					<li><a href="#">HOME</a></li>
   					<li><a href="#">PORTFOLIO</a></li>
   					<li><a href="#">CONTACT</a></li>
+  					<a href="javascript:void(0);" class="mobile" onClick="myFunction()"><i class="fa fa-bars"></i></a>
   					<div class="line"></div>
   				</ul>
   			</div>
@@ -33,4 +34,15 @@
   		</div>
   	</div>
 </body>
+<script>
+	/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("topNav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
 </html>
